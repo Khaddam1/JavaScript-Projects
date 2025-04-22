@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="css/style.css"> </head>
+<body id="game-body"> <div class="game-container"> <h1>Tic Tac Toe Game</h1>
+        <canvas id="winning-indicator" width="608" height="608"></canvas> <div class="grid-container"> <table>
+                <tr>
+                    <td id="cell-0" onclick="cellClicked('cell-0')"></td> <td id="cell-1" onclick="cellClicked('cell-1')"></td>
+                    <td id="cell-2" onclick="cellClicked('cell-2')"></td>
+                </tr>
+                <tr>
+                    <td id="cell-3" onclick="cellClicked('cell-3')"></td>
+                    <td id="cell-4" onclick="cellClicked('cell-4')"></td>
+                    <td id="cell-5" onclick="cellClicked('cell-5')"></td>
+                </tr>
+                <tr>
+                    <td id="cell-6" onclick="cellClicked('cell-6')"></td>
+                    <td id="cell-7" onclick="cellClicked('cell-7')"></td>
+                    <td id="cell-8" onclick="cellClicked('cell-8')"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script src="js/game_logic.js"></script> </body>
+</html>
