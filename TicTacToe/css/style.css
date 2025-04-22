@@ -1,0 +1,60 @@
+/* General body styling */
+body#game-body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the top */
+    padding-top: 50px; /* Add padding instead of margin on container */
+    font-family: Arial, sans-serif;
+}
+
+/* Container for the game elements */
+.game-container {
+    width: 608px;
+    position: relative; /* Needed for absolute positioning of canvas */
+    text-align: center; /* Center heading */
+}
+
+h1 {
+    margin-bottom: 20px; /* Space below heading */
+}
+
+/* Canvas for drawing the winning line */
+#winning-indicator {
+    position: absolute;
+    top: 0; /* Align canvas with the grid container */
+    left: 0;
+    z-index: 1; /* Ensure canvas is above grid but below potential overlays */
+    pointer-events: none; /* Clicks pass through the canvas */
+}
+
+/* Styling for the grid container */
+.grid-container {
+    position: relative; /* Context for canvas */
+    z-index: 0; /* Ensure grid is below canvas */
+}
+
+/* Table styling */
+table {
+    border-collapse: collapse;
+    margin: 0 auto; /* Center table within its container */
+}
+
+/* Table cell (square) styling */
+td {
+    width: 200px;
+    height: 200px;
+    border: 5px solid #03FC7F; /* Slightly different border style */
+    padding: 0;
+    cursor: pointer;
+    background-size: contain; /* Ensure X/O images fit well */
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: contrast(1.5); /* Slightly adjusted filter */
+    vertical-align: middle; /* Center content vertically (though background handles images) */
+    text-align: center; /* Center content horizontally */
+}
+
+/* Style changes on hover for feedback */
+td:hover {
+    background-color: rgba(3, 252, 127, 0.1); /* Subtle hover effect */
+}
