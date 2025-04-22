@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza </title>
+    <link rel="stylesheet" type="text/css" href="css/main_styles.css" />
+</head>
+<body>
+    <div id="order-interface-container">
+        <h1 style="margin: 0 0 20px 20px; text-align: center;">Build Your Pizza</h1>
+        <input id="place-order-btn" type="button" onclick="generateReceipt()" value="Place Order">
+
+        <form id="pizza-config-form">
+            <div class="config-section section-left">
+                <h3>Select Size:</h3>
+                <input class="pizza-size-selector" type="radio" name="PizzaSize" value="Personal Pizza"> Personal (6")<br>
+                <input class="pizza-size-selector" type="radio" name="PizzaSize" value="Small Pizza"> Small (8")<br>
+                <input class="pizza-size-selector" type="radio" name="PizzaSize" value="Medium Pizza"> Medium (10")<br>
+                <input class="pizza-size-selector" type="radio" name="PizzaSize" value="Large Pizza" checked> Large (14")<br>
+                <input class="pizza-size-selector" type="radio" name="PizzaSize" value="Extra Large Pizza"> Extra Large (16")<br>
+            </div>
+
+            <div class="config-section section-center">
+                <h3>Choose Vegetables:</h3>
+                <input class="topping-selector" type="checkbox" name="PizzaTopping" value="Mushrooms"> Mushrooms<br>
+                <input class="topping-selector" type="checkbox" name="PizzaTopping" value="Onions"> Onions<br>
+                <input class="topping-selector" type="checkbox" name="PizzaTopping" value="Tomatoes"> Tomatoes<br>
+                <input class="topping-selector" type="checkbox" name="PizzaTopping" value="Olives"> Olives<br>
+                <input class="topping-selector" type="checkbox" name="PizzaTopping" value="Green Peppers"> Green Peppers<br>
+            </div>
+
+            <div class="config-section section-right">
+                <h3>Choose Meats:</h3>
+                <input class="topping-selector" type="checkbox" name="PizzaTopping" value="Pepperoni"> Pepperoni<br>
+                <input class="topping-selector" type="checkbox" name="PizzaTopping" value="Sausage"> Sausage<br>
+                <input class="topping-selector" type="checkbox" name="PizzaTopping" value="Canadian Bacon"> Canadian Bacon<br>
+                <input class="topping-selector" type="checkbox" name="PizzaTopping" value="Ground Beef"> Ground Beef<br>
+                <input class="topping-selector" type="checkbox" name="PizzaTopping" value="Anchovy"> Anchovy<br>
+                <input class="topping-selector" type="checkbox" name="PizzaTopping" value="Chicken"> Chicken<br>
+                <input class="topping-selector" type="checkbox" name="PizzaTopping" value="Salami"> Salami<br>
+            </div>
+
+            <div id="receipt-area">
+                <div id="order-details-text"></div>
+                <div id="final-price-display"></div>
+            </div>
+        </form>
+    </div>
+    <script src="js/order_logic.js"></script>
+</body>
+</html>
