@@ -1,0 +1,119 @@
+/* Basic body styling */
+body {
+    background-color: #334d4d; /* Teal background color */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font stack */
+}
+
+/* Main heading style */
+h1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; /* Different heading font */
+    color: #f0f0f0; /* Light grey color */
+    margin-bottom: 20px !important; /* Ensure margin applies */
+    padding-top: 10px;
+    text-shadow: 1px 1px 2px #000; /* Subtle text shadow */
+}
+
+/* Sub-heading style */
+h3 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #e0e0e0; /* Lighter color for subheadings */
+    margin-bottom: 10px;
+    border-bottom: 1px solid #668080; /* Subtle separator */
+    padding-bottom: 5px;
+}
+
+/* Default text color for divs within the container */
+#order-interface-container div {
+    color: #f5f5f5; /* Off-white default text */
+}
+
+/* Main container for the order interface */
+#order-interface-container { /* Renamed ID */
+    max-width: 700px; /* Slightly wider */
+    min-height: 500px; /* Adjusted height */
+    margin: 20px auto; /* Added top/bottom margin */
+    background-color: rgba(0, 0, 0, 0.2); /* Semi-transparent background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+/* Form styling */
+#pizza-config-form { /* Renamed ID */
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow wrapping */
+    justify-content: space-between; /* Space out sections */
+    width: 100%; /* Take full width of container */
+}
+
+/* Styling for each configuration section (size, veggies, meats) */
+.config-section { /* Renamed class */
+    width: calc(33% - 15px); /* Adjust width for 3 columns with spacing */
+    margin-bottom: 20px; /* Space below sections */
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.05); /* Very subtle background */
+    border-radius: 5px;
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+/* Adjust layout for smaller screens if needed */
+@media (max-width: 650px) {
+    .config-section {
+        width: calc(50% - 10px); /* 2 columns on smaller screens */
+    }
+     /* Ensure receipt area takes full width below */
+    #receipt-area {
+        width: 100%;
+        order: 3; /* Make receipt appear last */
+    }
+}
+
+/* Receipt area styling */
+#receipt-area { /* Renamed ID */
+    width: 100%; /* Full width below options */
+    min-height: 150px; /* Minimum height */
+    margin-top: 20px; /* Space above receipt */
+    display: flex;
+    justify-content: space-around; /* Space out details and total */
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.3); /* Darker background for receipt */
+    border-radius: 5px;
+    box-sizing: border-box;
+    order: 2; /* Position after option sections */
+}
+
+/* Order details text area */
+#order-details-text { /* Renamed ID */
+    width: 60%; /* Allocate more space for details */
+    line-height: 1.6; /* Improve readability */
+}
+
+/* Final price display area */
+#final-price-display { /* Renamed ID */
+    width: 35%; /* Space for total */
+    text-align: right;
+    font-size: 1.2em; /* Larger font for total */
+    font-weight: bold;
+}
+#final-price-display h3 {
+    border-bottom: none; /* Remove border from total price heading */
+}
+
+/* Place Order button styling */
+#place-order-btn { /* Renamed ID */
+    display: block; /* Make it a block element */
+    width: 150px; /* Wider button */
+    height: 45px; /* Taller button */
+    margin: 15px auto 25px auto; /* Center button with margins */
+    background-color: #5cb85c; /* Green color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#place-order-btn:hover {
+    background-color: #4cae4c; /* Darker green on hover */
+}
