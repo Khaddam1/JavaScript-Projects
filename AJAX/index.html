@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Unique AJAX Demo</title>
+<style>
+  #updateArea {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 20px;
+  }
+</style>
+</head>
+<body>
+
+<h1>Load Content with AJAX</h1>
+
+<button id="loadButton">Load New Content</button>
+
+<div id="updateArea">
+  <p>Initial content here. Click the button to load more!</p>
+</div>
+
+<script>
+document.getElementById('loadButton').addEventListener('click', function() {
+  var xhr = new XMLHttpRequest();
+
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+      document.getElementById('updateArea').innerHTML = xhr.responseText;
+    }
+  };
+
+  xhr.open('GET', 'new_content.txt', true);
+  xhr.send();
+});
+</script>
+
+</body>
+</html>
