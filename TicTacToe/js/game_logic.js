@@ -35,7 +35,12 @@ function cellClicked(cellId) {
 
     // Update the visual board
     const cellElement = document.getElementById(cellId);
-    const imagePath = `images/${currentPlayer.toLowerCase()}.png`; // Assumes images/x.png and images/o.png
+    let imageUrl;
+    if (currentPlayer === PLAYER_X) {
+        imageUrl = 'https://media.geeksforgeeks.org/wp-content/uploads/20201230114437/x.png';
+    } else { // currentPlayer is PLAYER_O
+        imageUrl = 'https://media.geeksforgeeks.org/wp-content/uploads/20201230114434/o-300x300.png';
+    }    
     cellElement.style.backgroundImage = `url("${imagePath}")`;
 
     // Record the move
