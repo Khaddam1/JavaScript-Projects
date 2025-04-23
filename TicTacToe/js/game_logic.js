@@ -1,7 +1,7 @@
 // -- Game State Variables --
 let currentPlayer = 'X'; // Tracks the current player ('X' or 'O')
 let gameBoardState = []; // Stores the moves made, e.g., ["cell-0X", "cell-4O"]
-let isGameActive = true; // Flag to control game flow, prevents clicks after game ends
+let isGameActive = true; // Flag to control game flow, prevents clicks after the game ends
 
 // -- DOM Elements --
 const gameBody = document.getElementById('game-body');
