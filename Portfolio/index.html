@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nadine's Portfolio</title>
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="assets/icons/favicon.ico"
+    />
+    <link rel="stylesheet" type="text/css" href="css/sample_portfolio.css" />
+  </head>
+  <body class="SiteBackground">
+    <nav class="HeaderNavigation">
+      <a class="nav-link active" href="#WelcomeSection">Home</a>
+      <a class="nav-link" href="#GallerySection">Showcase</a>
+      <a class="nav-link" href="#BioSection">About</a>
+      <a class="nav-link" href="#CodeSection">GitHub</a>
+      <a
+        onclick="showContactForm()"
+        ondblclick="hideContactForm()"
+        class="nav-link contact-trigger"
+        >Contact</a
+      >
+    </nav>
+
+    <section id="WelcomeSection">
+      <video autoplay muted loop id="BgVideoPlayer">
+        <source src="assets/video/background_loop.mp4" type="video/mp4" />
+        Your browser does not support HTML5 video.
+      </video>
+    </section>
+
+    <div class="HeroTextContainer">
+      <h1 class="light-text">Welcome to My New Portfolio</h1>
+      <strong>
+        <p class="centered-text intro-quote">
+          My name is Nadine Khaddam. Welcome to my new upgraded portfolio. Here
+          I showcase my background and experience in software development.
+          <br />
+          <br />Thank you for visiting!
+        </p>
+      </strong>
+    </div>
+
+    <section id="GallerySection">
+      <div class="GalleryBackground">
+        <h2>Project Showcase</h2>
+        <div class="SlideshowWrapper">
+          <div class="SlideItem fade-effect" style="display: block">
+            <img
+              class="GalleryImage"
+              src="https://images.pexels.com/photos/1181673/pexels-photo-1181673.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+              alt=""
+            />
+            <div class="caption">
+              I'm available for new development opportunities!
+            </div>
+          </div>
+          <div class="SlideItem fade-effect" style="display: none">
+            <img
+              class="GalleryImage"
+              src="https://t3.ftcdn.net/jpg/02/14/87/96/360_F_214879686_R3HFJlk6WLr1kcdvy6Q9rtNASKN0BZBS.jpg"
+              alt="HTML, CSS, JavaScript Logos"
+            />
+            <div class="caption"><br />HTML, CSS, JavaScript</div>
+          </div>
+          <div class="SlideItem fade-effect" style="display: none">
+            <img
+              class="GalleryImage"
+              src="https://www.mindinventory.com/blog/wp-content/uploads/2022/10/python-developer.png"
+              alt="Python Logo"
+            />
+            <div class="caption">
+              Experienced with the Python programming language.
+            </div>
+          </div>
+
+          <div class="SlideItem fade-effect" style="display: none">
+            <img
+              class="GalleryImage"
+              src="https://img.freepik.com/free-vector/hand-drawn-web-developers_23-2148819604.jpg"
+              alt=""
+            />
+            <div class="caption">
+              <a class="light-text contact-trigger" onclick="showContactForm()"
+                >Contact me to discuss your project!</a
+              >
+            </div>
+          </div>
+          <a class="PrevButton" onclick="navigateSlides(-1)">&#10094;</a>
+          <a class="NextButton" onclick="navigateSlides(1)">&#10095;</a>
+        </div>
+        <br />
+        <div style="text-align: center">
+          <span class="IndicatorDot active" onclick="selectSlide(1)"></span>
+          <span class="IndicatorDot" onclick="selectSlide(2)"></span>
+          <span class="IndicatorDot" onclick="selectSlide(3)"></span>
+          <span class="IndicatorDot" onclick="selectSlide(4)"></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="ContentRow" id="BioSection">
+      <div class="InfoColumn TextColumn">
+        <h1>About Me</h1>
+        <p>
+          I am a passionate software developer, I enjoy Programming and i want
+          to be a good programmer.
+          <br /><br />
+          <a onclick="showContactForm()" class="contact-trigger">Contact me</a>
+          below!
+        </p>
+      </div>
+      <div class="InfoColumn ImageColumn">
+        <img
+          src="https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          alt="Developer working at a computer"
+        />
+      </div>
+    </section>
+
+    <section class="ContentRow" id="CodeSection">
+      <div class="InfoColumn TextColumn">
+        <h1>GitHub</h1>
+        <p>Explore my coding projects on GitHub:</p>
+        <p class="centered-text">
+          <a
+            href="https://github.com/Khaddam1"
+            target="_blank"
+            rel="noopener noreferrer"
+            >My GitHub Profile</a
+          >
+        </p>
+      </div>
+      <div class="InfoColumn ImageColumn">
+        <a href="" target="_blank" rel="noopener noreferrer">
+          <img
+            src="https://logos-world.net/wp-content/uploads/2020/11/GitHub-Logo.png"
+            alt="GitHub Logo"
+          />
+        </a>
+      </div>
+    </section>
+
+    <section id="ContactFormArea">
+      <button onclick="showContactForm()" class="ContactPopupButton">
+        CONTACT ME
+      </button>
+      <div
+        class="ModalForm"
+        id="ContactModalContainer"
+        ondblclick="hideContactForm()"
+        style="display: none"
+      >
+        <form
+          action="https://formspree.io/f/your_form_id"
+          method="POST"
+          class="ModalContent"
+        >
+          <h1>Contact</h1>
+          <label for="contact_name"><b>Name</b></label>
+          <input
+            type="text"
+            placeholder="Your Name"
+            name="name"
+            id="contact_name"
+            required
+          />
+          <label for="contact_phone"><b>Phone (Optional)</b></label>
+          <input
+            type="tel"
+            placeholder="Your Phone Number"
+            name="phone"
+            id="contact_phone"
+          />
+          <label for="contact_email"><b>Email</b></label>
+          <input
+            type="email"
+            placeholder="Your Email Address"
+            name="email"
+            id="contact_email"
+            required
+          />
+          <label for="contact_message"><b>Message</b></label>
+          <textarea
+            placeholder="Your Message"
+            name="message"
+            id="contact_message"
+            required
+            rows="4"
+          ></textarea>
+          <button type="submit" class="SubmitButton">SEND</button>
+          <button type="button" class="CloseButton" onclick="hideContactForm()">
+            CLOSE
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <footer class="SiteFooter">
+      <p class="centered-text">
+        &copy; | By
+        <a href="" target="_blank" rel="noopener noreferrer">Nadine Khaddam</a>
+        | <a href="" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </p>
+    </footer>
+
+    <script src="js//sample_portfolio.js"></script>
+  </body>
+</html>
