@@ -41,7 +41,7 @@ function cellClicked(cellId) {
     } else { // currentPlayer is PLAYER_O
         imageUrl = 'https://media.geeksforgeeks.org/wp-content/uploads/20201230114434/o-300x300.png';
     }    
-    cellElement.style.backgroundImage = `url("${imagePath}")`;
+    cellElement.style.backgroundImage = `url("${imageUrl}")`;
 
     // Record the move
     gameBoardState.push(cellId + currentPlayer);
